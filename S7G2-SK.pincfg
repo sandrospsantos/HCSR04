@@ -172,9 +172,7 @@
   </v1:configSetting>
   <v1:configSetting configurationId="p504.gpio_mode" altId="p504.gpio_mode.gpio_mode_peripheral"/>
   <v1:configSetting configurationId="p705.gpio_drivecapacity" altId="p705.gpio_speed.gpio_speed_high"/>
-  <v1:configSetting configurationId="qspi0.qspclk" altId="qspi0.qspclk.p500">
-    <v1:connectionSetting altId="p500.qspi0.qspclk"/>
-  </v1:configSetting>
+  <v1:configSetting configurationId="qspi0.qspclk" altId="qspi0.qspclk.none"/>
   <v1:configSetting configurationId="p113.gpio_mode" altId="p113.gpio_mode.gpio_mode_out.low"/>
   <v1:configSetting configurationId="p313.gpio_mode" altId="p313.gpio_mode.gpio_mode_peripheral"/>
   <v1:configSetting configurationId="p602.gpio_mode" altId="p602.gpio_mode.gpio_mode_out.low"/>
@@ -250,7 +248,6 @@
   <v1:configSetting configurationId="p400.gpio_mode" altId="p400.gpio_mode.gpio_mode_in"/>
   <v1:configSetting configurationId="p606.gpio_drivecapacity" altId="p606.gpio_speed.gpio_speed_medium"/>
   <v1:configSetting configurationId="p100.gpio_mode" altId="p100.gpio_mode.gpio_mode_peripheral"/>
-  <v1:configSetting configurationId="p500.gpio_mode" altId="p500.gpio_mode.gpio_mode_peripheral"/>
   <v1:configSetting configurationId="sci6.txd" altId="sci6.txd.p305">
     <v1:connectionSetting altId="p305.sci6.txd"/>
   </v1:configSetting>
@@ -512,9 +509,6 @@
   <v1:configSetting configurationId="p501" altId="p501.qspi0.qssl">
     <v1:connectionSetting altId="qspi0.qssl.p501"/>
   </v1:configSetting>
-  <v1:configSetting configurationId="p500" altId="p500.qspi0.qspclk">
-    <v1:connectionSetting altId="qspi0.qspclk.p500"/>
-  </v1:configSetting>
   <v1:configSetting configurationId="p506" altId="p506.input"/>
   <v1:configSetting configurationId="sci8.txd" altId="sci8.txd.p105">
     <v1:connectionSetting altId="p105.sci8.txd"/>
@@ -567,7 +561,6 @@
   <v1:configSetting configurationId="p305.gpio_mode" altId="p305.gpio_mode.gpio_mode_peripheral"/>
   <v1:configSetting configurationId="p105.gpio_mode" altId="p105.gpio_mode.gpio_mode_peripheral"/>
   <v1:configSetting configurationId="p504.gpio_drivecapacity" altId="p504.gpio_speed.gpio_speed_high"/>
-  <v1:configSetting configurationId="p500.gpio_drivecapacity" altId="p500.gpio_speed.gpio_speed_high"/>
   <v1:configSetting configurationId="p705.gpio_mode" altId="p705.gpio_mode.gpio_mode_peripheral"/>
   <v1:configSetting configurationId="p501.gpio_drivecapacity" altId="p501.gpio_speed.gpio_speed_high"/>
   <v1:configSetting configurationId="p403" altId="p403.etherc1.rmii.mdc">
@@ -863,7 +856,6 @@
   <v1:propertySetting propertyId="p406.symbolic_name" value="Ethernet_Controller_1_RMII_RMII1_TXD1"/>
   <v1:propertySetting propertyId="p002.symbolic_name" value="GPIO27"/>
   <v1:propertySetting propertyId="p302.symbolic_name" value="SCI2_TXD2_SDA2_MOSI2"/>
-  <v1:propertySetting propertyId="p500.symbolic_name" value="Quad_SPI_QSPCLK"/>
   <v1:propertySetting propertyId="p311.symbolic_name" value="GPIO32"/>
   <v1:propertySetting propertyId="p604.symbolic_name" value="GPIO2"/>
   <v1:propertySetting propertyId="p801.symbolic_name" value="GPIO14"/>
@@ -951,4 +943,20 @@
     <v1:connectionSetting altId="p213.cgc0.xtal"/>
   </v1:configSetting>
   <v1:configSetting configurationId="p213.gpio_mode" altId="p213.gpio_mode.gpio_mode_peripheral"/>
+  <v1:configSetting configurationId="gpt11.gtioca" altId="gpt11.gtioca.p500">
+    <v1:connectionSetting altId="p500.gpt11.gtioca"/>
+  </v1:configSetting>
+  <v1:configSetting configurationId="gpt0.mode" altId="gpt0.mode.gtiocaorgtiocb.free"/>
+  <v1:configSetting configurationId="gpt11.mode" altId="gpt11.mode.gtiocaorgtiocb.free"/>
+  <v1:configSetting configurationId="gpt0.gtioca" altId="gpt0.gtioca.p512">
+    <v1:connectionSetting altId="p512.gpt0.gtioca"/>
+  </v1:configSetting>
+  <v1:configSetting configurationId="p512.gpio_mode" altId="p512.gpio_mode.gpio_mode_peripheral"/>
+  <v1:configSetting configurationId="p512" altId="p512.gpt0.gtioca">
+    <v1:connectionSetting altId="gpt0.gtioca.p512"/>
+  </v1:configSetting>
+  <v1:configSetting configurationId="p500.gpio_mode" altId="p500.gpio_mode.gpio_mode_peripheral"/>
+  <v1:configSetting configurationId="p500" altId="p500.gpt11.gtioca">
+    <v1:connectionSetting altId="gpt11.gtioca.p500"/>
+  </v1:configSetting>
 </v1:pinSettings>

@@ -397,7 +397,7 @@ SPI0: SSL1"
 "P415","36","CTSU0_TS11","Cap_Touch_Sensing_Unit_TS11","Low","","Peripheral mode","CMOS","None","CTSU0: TS11
 ETHERC0: TXD_EN
 SPI0: SSL2"
-"P500","140","QSPI0_QSPCLK","Quad_SPI_QSPCLK","High","","Peripheral mode","CMOS","None","ADC0: AN16
+"P500","140","GPT11_GTIOCA","","Low","","Peripheral mode","CMOS","None","ADC0: AN16
 AGT0: AGTOA
 CMP0: IVREF0
 GPT11: GTIOCA
@@ -464,7 +464,7 @@ IRQ0: IRQ15
 PDC0: PCKO
 SCI4: RXD_MISO
 SCI4: SCL"
-"P512","175","","","","","Disabled","","","CAN1: CTX
+"P512","175","GPT0_GTIOCA","","","None","Peripheral mode","CMOS","None","CAN1: CTX
 GPT0: GTIOCA
 IIC2: SCL
 IRQ0: IRQ14
