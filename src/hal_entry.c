@@ -73,7 +73,7 @@ void echo_measurement_callback(input_capture_callback_args_t * p_args)
                 case CHANNEL_BACK_LEFT:
                     backLeftSensorDistance = (int)time_captured/58000;
                     g_sensor_back_left.p_api->disable(g_sensor_back_left.p_ctrl);
-                    g_sensor_back_right.p_api->enable(g_sensor_back_right.p_ctrl);
+                    g_sensor_back_middle.p_api->enable(g_sensor_back_middle.p_ctrl);
                     break;
                 case CHANNEL_BACK_MIDDLE:
                     backMiddleSensorDistance = (int)time_captured/58000;
@@ -93,7 +93,7 @@ void echo_measurement_callback(input_capture_callback_args_t * p_args)
                 case CHANNEL_FRONT_LEFT:
                     frontLeftSensorDistance = (int)time_captured/58000;
                     g_sensor_front_left.p_api->disable(g_sensor_front_left.p_ctrl);
-                    g_sensor_front_right.p_api->enable(g_sensor_front_right.p_ctrl);
+                    g_sensor_front_middle.p_api->enable(g_sensor_front_middle.p_ctrl);
                     break;
                 case CHANNEL_FRONT_MIDDLE:
                     frontMiddleSensorDistance = (int)time_captured/58000;
