@@ -153,7 +153,7 @@ GLCDC0: LCD_DATA08
 SSI0: SSITXD"
 "P200","69","","","","","Disabled","","","IRQ0: NMI"
 "P201","68","","","","","Disabled","","",""
-"P202","54","SCI2_SCK","SCI2_SCK2","High","None","Peripheral mode","CMOS","None","BUS0: WR1_BC1
+"P202","54","","","","","Disabled","","","BUS0: WR1_BC1
 CAN0: CRX
 GLCDC0: LCD_TCON3
 GPT5: GTIOCB
@@ -186,7 +186,7 @@ SDHI0: DAT4
 SPI1: RSPCK
 SSI1: SSISCK
 USBFS0: OVRCURB"
-"P205","51","GPT4_GTIOCA","","Low","None","Peripheral mode","CMOS","None","AGT1: AGTO
+"P205","51","","","","","Disabled","","","AGT1: AGTO
 BUS0: A16
 CGC0: CLKOUT
 CTSU0: TSCAP
@@ -233,7 +233,7 @@ SCI1: TXD_MOSI"
 DEBUG0: TCK
 GPT0: GTIOCA
 SPI1: SSL1"
-"P301","87","SCI2_RXD_MISO","SCI2_RXD2_SCL2_MISO2","Medium","None","Peripheral mode","CMOS","None","BUS0: A06
+"P301","87","","","","","Disabled","","","BUS0: A06
 GLCDC0: LCD_DATA13
 GPT4: GTIOCB
 IRQ0: IRQ06
@@ -241,7 +241,7 @@ OPS0: GTOULO
 SCI2: RXD_MISO
 SCI2: SCL
 SPI1: SSL2"
-"P302","86","SCI2_TXD_MOSI","SCI2_TXD2_SDA2_MOSI2","Medium","None","Peripheral mode","CMOS","None","BUS0: A07
+"P302","86","GPT4_GTIOCA","","Low","None","Peripheral mode","CMOS","None","BUS0: A07
 GLCDC0: LCD_DATA14
 GPT4: GTIOCA
 IRQ0: IRQ05
