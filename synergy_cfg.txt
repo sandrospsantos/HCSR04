@@ -302,7 +302,7 @@ Synergy Configuration
       Mode: Pulse Width
       Signal Edge: Rising
       Repetition: Periodic
-      Auto Start: False
+      Auto Start: True
       Callback: echo_measurement_callback
       Input Capture Signal Pin: GTIOCA
       GTIOCx Signal Filter: None

@@ -14,7 +14,7 @@ static const gpt_input_capture_extend_t g_sensor_back_right_extend =
 static const input_capture_cfg_t g_sensor_back_right_cfg =
 { .channel = 0, .mode = INPUT_CAPTURE_MODE_PULSE_WIDTH, .edge = INPUT_CAPTURE_SIGNAL_EDGE_RISING, .repetition =
           INPUT_CAPTURE_REPETITION_PERIODIC,
-  .autostart = false, .p_callback = echo_measurement_callback, .p_context = &g_sensor_back_right, .p_extend =
+  .autostart = true, .p_callback = echo_measurement_callback, .p_context = &g_sensor_back_right, .p_extend =
           &g_sensor_back_right_extend,
   .capture_irq_ipl = (12), .overflow_irq_ipl = (12), };
 /* Instance structure to use this module. */

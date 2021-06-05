@@ -181,7 +181,7 @@
       <property id="module.driver.input_capture.mode" value="module.driver.input_capture.mode.pulse_width"/>
       <property id="module.driver.input_capture.signal_edge" value="module.driver.input_capture.signal_edge.rising"/>
       <property id="module.driver.input_capture.repetition" value="module.driver.input_capture.repetition.periodic"/>
-      <property id="module.driver.input_capture.autostart" value="module.driver.input_capture.autostart.false"/>
+      <property id="module.driver.input_capture.autostart" value="module.driver.input_capture.autostart.true"/>
       <property id="module.driver.input_capture.p_callback" value="echo_measurement_callback"/>
       <property id="module.driver.input_capture.signal" value="module.driver.input_capture.signal.gtioca"/>
       <property id="module.driver.input_capture.signal_filter" value="module.driver.input_capture.signal_filter.none"/>
