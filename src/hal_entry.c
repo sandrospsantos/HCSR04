@@ -18,20 +18,19 @@ static uint32_t capture_counter = 0;
 int backRightSensorDistance, backLeftSensorDistance;
 int sumOfDistance = 0;
 
-//void echo_measurement_callback(input_capture_callback_args_t * p_args);
+void echo_measurement_callback(input_capture_callback_args_t * p_args);
 
 void hal_entry(void)
 {
     /* Initialize Input Capture Driver */
     g_sensor_back_right.p_api->open(g_sensor_back_right.p_ctrl, g_sensor_back_right.p_cfg);
-//    g_sensor_back_left.p_api->open(g_sensor_back_left.p_ctrl, g_sensor_back_left.p_cfg);
+    g_sensor_back_left.p_api->open(g_sensor_back_left.p_ctrl, g_sensor_back_left.p_cfg);
 
-    //g_sensor_back_left.p_api->enable(g_sensor_back_left.p_ctrl);
     g_sensor_back_right.p_api->enable(g_sensor_back_right.p_ctrl);
 
     /* Get the status of the measurement counter */
-    g_sensor_back_right.p_api->infoGet(g_sensor_back_right.p_ctrl, &echo_measurement_info);
-    //g_sensor_back_left.p_api->infoGet(g_sensor_back_left.p_ctrl, &echo_measurement_info);
+//    g_sensor_back_right.p_api->infoGet(g_sensor_back_right.p_ctrl, &echo_measurement_info);
+//    g_sensor_back_left.p_api->infoGet(g_sensor_back_left.p_ctrl, &echo_measurement_info);
 
     /* Initialize GPT Timer Driver */
     g_trigger.p_api->open(g_trigger.p_ctrl, g_trigger.p_cfg);
@@ -65,15 +64,15 @@ void echo_measurement_callback(input_capture_callback_args_t * p_args)
             if(CHANNEL_ZERO == p_args->channel)
             {
                 backRightSensorDistance = (int)time_captured/58000;
-//                g_sensor_back_right.p_api->disable(g_sensor_back_right.p_ctrl);
-//                g_sensor_back_left.p_api->enable(g_sensor_back_left.p_ctrl);
+                g_sensor_back_right.p_api->disable(g_sensor_back_right.p_ctrl);
+                g_sensor_back_left.p_api->enable(g_sensor_back_left.p_ctrl);
             }
-//            if(CHANNEL_ONE == p_args->channel)
-//            {
-//                backLeftSensorDistance = (int)time_captured/58000;
-//                g_sensor_back_left.p_api->disable(g_sensor_back_left.p_ctrl);
-//                g_sensor_back_right.p_api->enable(g_sensor_back_right.p_ctrl);
-//            }
+            if(CHANNEL_ONE == p_args->channel)
+            {
+                backLeftSensorDistance = (int)time_captured/58000;
+                g_sensor_back_left.p_api->disable(g_sensor_back_left.p_ctrl);
+                g_sensor_back_right.p_api->enable(g_sensor_back_right.p_ctrl);
+            }
 
             time_captured = 0;
             capture_overflow = 0;

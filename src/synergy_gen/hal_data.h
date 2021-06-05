@@ -13,6 +13,11 @@ extern "C"
 {
 #endif
 /** Timer on GPT Instance. */
+extern const input_capture_instance_t g_sensor_back_left;
+#ifndef echo_measurement_callback
+void echo_measurement_callback(input_capture_callback_args_t *p_args);
+#endif
+/** Timer on GPT Instance. */
 extern const input_capture_instance_t g_sensor_back_right;
 #ifndef echo_measurement_callback
 void echo_measurement_callback(input_capture_callback_args_t *p_args);

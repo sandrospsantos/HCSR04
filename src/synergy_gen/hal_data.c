@@ -1,5 +1,25 @@
 /* generated HAL source file - do not edit */
 #include "hal_data.h"
+#if !defined(SSP_SUPPRESS_ISR_g_sensor_back_left) && !defined(SSP_SUPPRESS_ISR_GPT1)
+SSP_VECTOR_DEFINE_CHAN(gpt_input_capture_counter_overflow_isr, GPT, COUNTER_OVERFLOW, 1);
+#endif
+#if !defined(SSP_SUPPRESS_ISR_g_sensor_back_left) && !defined(SSP_SUPPRESS_ISR_GPT1)
+SSP_VECTOR_DEFINE_CHAN(gpt_input_capture_isr, GPT, CAPTURE_COMPARE_A, 1);
+#endif
+static gpt_input_capture_instance_ctrl_t g_sensor_back_left_ctrl;
+static const gpt_input_capture_extend_t g_sensor_back_left_extend =
+{ .signal = GPT_INPUT_CAPTURE_SIGNAL_PIN_GTIOCA, .signal_filter = GPT_INPUT_CAPTURE_SIGNAL_FILTER_NONE, .clock_divider =
+          GPT_INPUT_CAPTURE_CLOCK_DIVIDER_1,
+  .enable_level = INPUT_CAPTURE_SIGNAL_LEVEL_NONE, .enable_filter = GPT_INPUT_CAPTURE_SIGNAL_FILTER_NONE, };
+static const input_capture_cfg_t g_sensor_back_left_cfg =
+{ .channel = 1, .mode = INPUT_CAPTURE_MODE_PULSE_WIDTH, .edge = INPUT_CAPTURE_SIGNAL_EDGE_RISING, .repetition =
+          INPUT_CAPTURE_REPETITION_PERIODIC,
+  .autostart = false, .p_callback = echo_measurement_callback, .p_context = &g_sensor_back_left, .p_extend =
+          &g_sensor_back_left_extend,
+  .capture_irq_ipl = (12), .overflow_irq_ipl = (12), };
+/* Instance structure to use this module. */
+const input_capture_instance_t g_sensor_back_left =
+{ .p_ctrl = &g_sensor_back_left_ctrl, .p_cfg = &g_sensor_back_left_cfg, .p_api = &g_input_capture_on_gpt };
 #if !defined(SSP_SUPPRESS_ISR_g_sensor_back_right) && !defined(SSP_SUPPRESS_ISR_GPT0)
 SSP_VECTOR_DEFINE_CHAN(gpt_input_capture_counter_overflow_isr, GPT, COUNTER_OVERFLOW, 0);
 #endif

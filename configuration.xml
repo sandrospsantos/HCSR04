@@ -191,6 +191,22 @@
       <property id="module.driver.input_capture.capture_ipl" value="board.icu.common.irq.priority12"/>
       <property id="module.driver.input_capture.overflow_ipl" value="board.icu.common.irq.priority12"/>
     </module>
+    <module id="module.driver.input_capture_on_gpt.1720363408">
+      <property id="module.driver.input_capture.name" value="g_sensor_back_left"/>
+      <property id="module.driver.input_capture.channel" value="1"/>
+      <property id="module.driver.input_capture.mode" value="module.driver.input_capture.mode.pulse_width"/>
+      <property id="module.driver.input_capture.signal_edge" value="module.driver.input_capture.signal_edge.rising"/>
+      <property id="module.driver.input_capture.repetition" value="module.driver.input_capture.repetition.periodic"/>
+      <property id="module.driver.input_capture.autostart" value="module.driver.input_capture.autostart.false"/>
+      <property id="module.driver.input_capture.p_callback" value="echo_measurement_callback"/>
+      <property id="module.driver.input_capture.signal" value="module.driver.input_capture.signal.gtioca"/>
+      <property id="module.driver.input_capture.signal_filter" value="module.driver.input_capture.signal_filter.none"/>
+      <property id="module.driver.input_capture.clock_divider" value="module.driver.input_capture.clock_divider.div1"/>
+      <property id="module.driver.input_capture.enable_level" value="module.driver.input_capture.enable_level.none"/>
+      <property id="module.driver.input_capture.enable_filter" value="module.driver.input_capture.enable_filter.none"/>
+      <property id="module.driver.input_capture.capture_ipl" value="board.icu.common.irq.priority12"/>
+      <property id="module.driver.input_capture.overflow_ipl" value="board.icu.common.irq.priority12"/>
+    </module>
     <context id="_hal.0">
       <stack module="module.driver.elc_on_elc.0"/>
       <stack module="module.driver.ioport_on_ioport.0"/>
@@ -198,6 +214,7 @@
       <stack module="module.driver.cgc_on_cgc.0"/>
       <stack module="module.driver.timer_on_gpt.605404699"/>
       <stack module="module.driver.input_capture_on_gpt.1424242721"/>
+      <stack module="module.driver.input_capture_on_gpt.1720363408"/>
     </context>
     <config id="config.driver.cgc">
       <property id="config.driver.cgc.param_checking_enable" value="config.driver.cgc.param_checking_enable.bsp"/>
